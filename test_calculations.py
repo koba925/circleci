@@ -3,7 +3,6 @@ import calculations
 
 
 class CalculationsTest(unittest.TestCase):
-    """割り算する関数をテストする"""
 
     def test_divide_normal(self):
         self.assertEqual(calculations.divide(2, 2), 1)
