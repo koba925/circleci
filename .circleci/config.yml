@@ -6,7 +6,7 @@ jobs:
     steps:
       - checkout
       - run: |
-          pip install pytest
+          sudo pip install pytest
           pytest test_calculations.py --junit-xml=test-results/pytest.xml
       - store_test_results:
           path: test-results
