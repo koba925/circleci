@@ -3,7 +3,7 @@ from menu.models import Tea, TEA_KINDS
 
 
 class TeaSearchForm(forms.Form):
-    name = forms.CharField(label="名前", maxlength=255, required=False)
+    name = forms.CharField(label="名前", max_length=255, required=False)
     kind = forms.MultipleChoiceField(label="種類", choices=TEA_KINDS, required=False)
 
     def clean(self):
