@@ -6,9 +6,9 @@ jobs:
     steps:
       - checkout
       - run: |
-          sudo pip install pytest
-          pip install pytest
-          pytest test_calculations.py --junit-xml=test-results/pytest.xml
-      - store_test_results:
-          path: test-results
-
+          python3.6 -m venv venv
+          source ./venv/bin/activate
+          pip install django==1.11.7
+          cd cafe/apps
+          python manage.py migrate
+          python manage.py test
