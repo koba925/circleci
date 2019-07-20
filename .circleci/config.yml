@@ -27,9 +27,9 @@ workflows:
   myworkflow:
     jobs:
       - lint:
-        filters:
-          branches:
-            only: master
+          filters:
+            branches:
+              only: master
       - test:
-        requires:
-          - lint
+          requires:
+            - lint
