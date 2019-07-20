@@ -29,7 +29,7 @@ workflows:
       -lint:
         filters:
           branches:
-            only:master
+            only: master
       -test:
         requires:
           - lint
