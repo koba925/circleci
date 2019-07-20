@@ -22,14 +22,14 @@ jobs:
           pip install pytest
           pytest test_calculations.py
 
-  workflows:
-    version: 2.1
-    myworkflow:
-      jobs:
-        -lint:
-          filters:
-            branches:
-              only:master
-        -test:
-          requires:
-            - lint
+workflows:
+  version: 2.1
+  myworkflow:
+    jobs:
+      -lint:
+        filters:
+          branches:
+            only:master
+      -test:
+        requires:
+          - lint
